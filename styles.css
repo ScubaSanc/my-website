@@ -1,0 +1,50 @@
+/*this is a TYPE selector*/
+/* *{
+    Color: rgb(7, 78, 7); */
+
+/*RGBA will make the text have a % of transparency*/
+
+/*this is a RELATIONAL SELECTOR. ...*/
+section img{
+    block-size: 200px
+}
+
+/*Uses at least 2 properties to style fonts*/
+
+/*Specifies color using RGB or hexcode in any CSS style rules that specify color*/
+ul{
+color: #ad3408;
+}
+
+/*this is a COMBINATION SELECTOR. ...*/
+h2.git_header{
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/*this is a RELATIVE UNITS OF MEASUREMENT in ALL CSS Style*/
+p {
+font-size: 100%;
+text-indent: 2em;
+line-height: 2em;
+}
+
+/*this is a ID selector.  Must be specific to ONLY ONE element on the page*/
+#git_header {
+    color: #ad3408
+}
+
+
+/*this is a CLASS selector can be added to multiple areas of the page at one time*/
+.first_text {
+color: rgb(128, 0, 122)
+}
+
+
+/*this is a ATTRIBUTE or PSEUDO-CLASS or a PSEUDO-ELEMENT*/
+main section h2 ul li 
+    a:link {color:#008000}
+    a:hover, a:focus {color:aqua}
+
+
+
