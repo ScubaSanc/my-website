@@ -5,28 +5,33 @@
 /*RGBA will make the text have a % of transparency*/
 
 /*this is a RELATIONAL SELECTOR. ...*/
-section img{
-    block-size: 200px
+section img {
+    size: 5px;
+    width: 5px;
+    height: 5px;
 }
 
 /*Uses at least 2 properties to style fonts*/
 
 /*Specifies color using RGB or hexcode in any CSS style rules that specify color*/
-ul{
-color: #ad3408;
+ul {
+    color: #c4b8b3;
+    font-size: 50%;
+    padding-right: 2%;
+    align-content: left;
 }
 
 /*this is a COMBINATION SELECTOR. ...*/
-h2.git_header{
-font-family: Arial, Helvetica, sans-serif;
+h2.git_header {
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
 /*this is a RELATIVE UNITS OF MEASUREMENT in ALL CSS Style*/
 p {
-font-size: 100%;
-text-indent: 2em;
-line-height: 2em;
+    font-size: 100%;
+    text-indent: 2em;
+    line-height: 2em;
 }
 
 /*this is a ID selector.  Must be specific to ONLY ONE element on the page*/
@@ -34,17 +39,208 @@ line-height: 2em;
     color: #ad3408
 }
 
-
 /*this is a CLASS selector can be added to multiple areas of the page at one time*/
-.first_text {
-color: rgb(128, 0, 122)
+.header {
+    color: rgb(14, 16, 160);
+    text-align: center;
+    justify-content: center;
+    
+}
+/*this is a CLASS selector can be added to multiple areas of the page at one time*/
+.sidebar-left {
+    color: rgb(235, 226, 234)
 }
 
 
 /*this is a ATTRIBUTE or PSEUDO-CLASS or a PSEUDO-ELEMENT*/
-main section h2 ul li 
-    a:link {color:#008000}
-    a:hover, a:focus {color:aqua}
+main section h2 ul li a:link {
+    color: #008000
+}
 
+a:hover,
+a:focus {
+    color: aqua
+}
 
+ /* For styling the header */
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1%;
+    grid-template-areas:
+        "logo title";
+    width: 100%;
+    margin: 1%;
+    font-family: "noto sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+ 
+/* Formatting the fishy logo */
+header .container {
+    grid-area: logo;
+    height: 95%;
+    line-height: 50%;
+}
 
+/* Adjustments to my fishy logo */
+#logo {
+    max-width: 300%;
+    min-width: 100%;
+    height: auto;
+    align-items: left;
+ 
+}
+
+/* Scaling the headers text */
+header .title {
+    grid-area: title;
+    height: 100%;
+    width: 100%;
+    line-height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+ /*Formatting my Navigation Menu */
+ 
+#nav_menu ul {
+    margin: 1%;
+    padding: 0%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+#nav_menu ul li a {
+    text-align: center;
+    display: inline;
+    width: 5%;
+    /*adjust the with of my nativation menu*/
+    padding: 1em 5em;
+    text-decoration: none;
+    color: rgb(32, 32, 167);
+    font-weight: bold;
+}
+ 
+#nav_menu ul li.lastitem a {
+    width: 25%;
+}
+ 
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus {
+    font-weight: bolder;
+}
+ 
+#mobile_menu {
+    display: none;
+}
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+}
+.container {
+        height: 600px;
+        display: grid;
+        grid-template: 75% 12% / 20% 60% 20%;
+        /* grid-template-columns: repeat (4, 1fr);
+        grid-template-rows: repeat (4, 1fr); */
+        /* grid-gap: 16px; */
+        grid-template-areas:
+            
+            "sidebar-left main-content sidebar-right"
+            "footer footer footer";
+    }
+ 
+ 
+ 
+.container {
+    height: 100vh;
+}
+ 
+.header {
+    grid-area: header;
+    background-color: #464b50;
+    padding: 25px;
+    text-align: center;
+}
+ 
+.sidebar-left,
+.sidebar-right {
+    background-color: #7f8b85;
+    padding: 20px;
+}
+ 
+.sidebar-left {
+ 
+    grid-area: sidebar-left;
+}
+ 
+.sidebar-right {
+    grid-area: sidebar-right;
+}
+ 
+.main-content {
+    background-color: #31afc9;
+    padding: 20px;
+}
+ 
+.footer {
+    grid-area: footer;
+    background-color: #6DF7E0;
+    padding: 20px;
+    text-align: center;
+}
+ 
+#highlight {
+    background-color: white;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "sidebar-left main-content sidebar-right"
+        "footer footer footer";
+    background-color: silver;
+    padding: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    gap: 20px;
+}
+
+.certifications-sidebar-left {
+    grid-area: sidebar-left;
+    background-color: #e0e0e0;
+    padding: 15px;
+}
+
+.certifications-main-content {
+    grid-area: main-content;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.certifications-sidebar-right {
+    grid-area: sidebar-right;
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: center;
+}
+
+.certifications-footer {
+    grid-area: footer;
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: center;
+}
