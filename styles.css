@@ -16,16 +16,23 @@ section img {
 /*Specifies color using RGB or hexcode in any CSS style rules that specify color*/
 ul {
     color: #c4b8b3;
-    font-size: 50%;
+    font-size: 15px;
     padding-right: 2%;
     align-content: left;
 }
 
 /*this is a COMBINATION SELECTOR. ...*/
 h2.git_header {
-    font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
 
 }
+/*this will format the Instructor name on the main page*/
+h2.first-text {
+        size: 30px;
+         font-family: Helvetica, sans-serif;
+
+}
+
 
 /*this is a RELATIVE UNITS OF MEASUREMENT in ALL CSS Style*/
 p {
@@ -55,7 +62,8 @@ p {
 
 /*this is a ATTRIBUTE or PSEUDO-CLASS or a PSEUDO-ELEMENT*/
 main section h2 ul li a:link {
-    color: #008000
+    color: #008000;
+    size: 200px;
 }
 
 a:hover,
@@ -165,8 +173,15 @@ html {
 
 .container {
     height: 100vh;
+    
 }
 
+.vertical-images {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* or center, or flex-end */
+  gap: 5em; /* space between images */
+}
 
 .header {
     grid-area: header;
@@ -184,15 +199,19 @@ html {
 .sidebar-left {
 
     grid-area: sidebar-left;
+    size: 10px;
 }
 
 .sidebar-right {
     grid-area: sidebar-right;
+    text-align: center;
+    size: 100px;
 }
 
 .main-content {
     background-color: #31afc9;
-    padding: 20px;
+    padding: 100px;
+    
 }
 
 .footer {
@@ -210,8 +229,9 @@ html {
 
 .certifications-container {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template: 80% 20% / 10% 85% 5%
+        grid-gap: 2px;
+    grid-template-areas:
     grid-template-areas:
         "sidebar-left main-content sidebar-right"
         "footer footer footer";
@@ -233,19 +253,28 @@ html {
     background-color: #fff;
     padding: 15px;
 }
+/* Responsive image class for certifications page */
+.Certifications-responsive-image {
+  max-width: 100%;
+  height: auto;
+}
 
-.certifications-sidebar-right {
+.Certifications-sidebar-right {
     grid-area: sidebar-right;
     background-color: #e0e0e0;
     padding: 10px;
     text-align: center;
 }
 
-.certifications-footer {
+.Certifications-footer {
     grid-area: footer;
     background-color: #e0e0e0;
     padding: 15px;
     text-align: center;
+}
+
+.about-container {
+    height: 100vh;
 }
 
 .about-container {
