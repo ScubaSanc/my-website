@@ -44,8 +44,9 @@ p {
     color: rgb(14, 16, 160);
     text-align: center;
     justify-content: center;
-    
+
 }
+
 /*this is a CLASS selector can be added to multiple areas of the page at one time*/
 .sidebar-left {
     color: rgb(235, 226, 234)
@@ -62,7 +63,7 @@ a:focus {
     color: aqua
 }
 
- /* For styling the header */
+/* For styling the header */
 header {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -76,7 +77,7 @@ header {
     font-weight: 700;
     font-style: normal;
 }
- 
+
 /* Formatting the fishy logo */
 header .container {
     grid-area: logo;
@@ -90,7 +91,7 @@ header .container {
     min-width: 100%;
     height: auto;
     align-items: left;
- 
+
 }
 
 /* Scaling the headers text */
@@ -103,102 +104,104 @@ header .title {
     justify-content: center;
     align-items: center;
 }
- 
- /*Formatting my Navigation Menu */
- 
+
+/*Formatting my Navigation Menu */
+
 #nav_menu ul {
     margin: 1%;
     padding: 0%;
     list-style-type: none;
     display: flex;
     justify-content: center;
-
+    font-size: 1em;
+    /* Increase navigation text size */
 }
 
 #nav_menu ul li a {
     text-align: center;
     display: inline;
-    width: 5%;
+    width: 10%;
     /*adjust the with of my nativation menu*/
     padding: 1em 5em;
     text-decoration: none;
-    color: rgb(32, 32, 167);
+    color: rgb(218, 218, 226);
     font-weight: bold;
 }
- 
+
 #nav_menu ul li.lastitem a {
     width: 25%;
+    
 }
- 
+
 #nav_menu ul li a:hover,
 #nav_menu ul li a:focus {
     font-weight: bolder;
 }
- 
+
 #mobile_menu {
     display: none;
 }
+
 body,
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    background: linear-gradient(135deg, #3f5680 0%, #223f68 100%);
 }
+
 .container {
-        height: 600px;
-        display: grid;
-        grid-template: 75% 12% / 20% 60% 20%;
-        /* grid-template-columns: repeat (4, 1fr);
-        grid-template-rows: repeat (4, 1fr); */
-        /* grid-gap: 16px; */
-        grid-template-areas:
-            
-            "sidebar-left main-content sidebar-right"
-            "footer footer footer";
-    }
- 
- 
- 
+    height: 600px;
+    display: grid;
+    grid-template: 80% 20% / 10% 85% 5%
+        grid-gap: 2px;
+    grid-template-areas:
+        "sidebar-left main-content sidebar-right"
+        "footer footer footer";
+}
+
+
+
 .container {
     height: 100vh;
 }
- 
+
+
 .header {
     grid-area: header;
     background-color: #464b50;
     padding: 25px;
     text-align: center;
 }
- 
+
 .sidebar-left,
 .sidebar-right {
     background-color: #7f8b85;
     padding: 20px;
 }
- 
+
 .sidebar-left {
- 
+
     grid-area: sidebar-left;
 }
- 
+
 .sidebar-right {
     grid-area: sidebar-right;
 }
- 
+
 .main-content {
     background-color: #31afc9;
     padding: 20px;
 }
- 
+
 .footer {
     grid-area: footer;
     background-color: #6DF7E0;
     padding: 20px;
     text-align: center;
 }
- 
+
 #highlight {
     background-color: white;
     padding: 0.5em 1em;
@@ -209,7 +212,7 @@ html {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: 
+    grid-template-areas:
         "sidebar-left main-content sidebar-right"
         "footer footer footer";
     background-color: silver;
@@ -234,11 +237,51 @@ html {
 .certifications-sidebar-right {
     grid-area: sidebar-right;
     background-color: #e0e0e0;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
 }
 
 .certifications-footer {
+    grid-area: footer;
+    background-color: #e0e0e0;
+    padding: 15px;
+    text-align: center;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "sidebar-left main-content sidebar-right"
+        "footer footer footer";
+    background-color: silver;
+    padding: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    gap: 20px;
+}
+
+.about-sidebar-left {
+    grid-area: sidebar-left;
+    background-color: #e0e0e0;
+    padding: 15px;
+}
+
+.about-main-content {
+    grid-area: main-content;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.about-sidebar-right {
+    grid-area: sidebar-right;
+    background-color: #e0e0e0;
+    padding: 10px;
+    text-align: center;
+}
+
+.about-footer {
     grid-area: footer;
     background-color: #e0e0e0;
     padding: 15px;
